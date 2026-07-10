@@ -44,6 +44,8 @@ next-env.d.ts
 
 # local dev server output
 dev.log
+debug-storybook.log
 
 *storybook.log
-storybook-static
+*.log
+storybook-static/
