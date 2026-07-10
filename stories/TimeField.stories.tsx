@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Description, FieldError, Label, TimeField } from '@heroui/react'
 import { Time, getLocalTimeZone, now } from '@internationalized/date'
+import { AltArrowDown, ClockCircle } from '@solar-icons/react/ssr'
 
 const meta = {
   title: 'HeroUI/Formularios/TimeField',
@@ -86,10 +87,7 @@ export const AllVariants: Story = {
             <Label>Time (prefix)</Label>
             <TimeField.Group>
               <TimeField.Prefix>
-                <svg className="size-4 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 7v5l3 3" />
-                </svg>
+                <ClockCircle className="text-muted" color="currentColor" size={16} weight="Linear" />
               </TimeField.Prefix>
               <TimeField.Input>{(segment) => <TimeField.Segment segment={segment} />}</TimeField.Input>
             </TimeField.Group>
@@ -99,9 +97,7 @@ export const AllVariants: Story = {
             <TimeField.Group>
               <TimeField.Input>{(segment) => <TimeField.Segment segment={segment} />}</TimeField.Input>
               <TimeField.Suffix>
-                <svg className="size-4 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
+                <AltArrowDown className="text-muted" color="currentColor" size={16} weight="Linear" />
               </TimeField.Suffix>
             </TimeField.Group>
           </TimeField>

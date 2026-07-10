@@ -112,6 +112,18 @@ HeroUI maneja los tokens `--field-*` internamente para focus, hover y estados. V
 ### Componentes con `.Root`
 Consultar el MCP `heroui-react` para el patrón compound exacto de: Accordion, Avatar, Card, Disclosure, Fieldset, Kbd, Link, Popover, Radio, Switch, Tabs, Tooltip.
 ---
+## Íconos
+**Librería oficial:** [Solar Icons](https://www.npmjs.com/package/@solar-icons/react) (`@solar-icons/react`).
+- **Import:** siempre desde la variante `/ssr` para evitar warnings de hidratación en Next.js App Router / Server Components:
+  ```tsx
+  import { Letter, Eye, AltArrowDown } from '@solar-icons/react/ssr'
+  ```
+- **Weight por defecto:** `"Linear"` (consistencia visual en todo el sistema). Otros pesos disponibles: `Bold`, `BoldDuotone`, `Broken`, `LineDuotone`, `Outline` — usar solo si un caso puntual lo justifica.
+- **Color:** `color="currentColor"` + `className` con un token de texto (ej. `text-muted`) para que el ícono herede color del contexto, igual que el texto.
+- **Tamaño:** prop `size` en px (ej. `size={16}` equivalente a `size-4`), no hardcodear con `className="size-4"` solo — usar la prop nativa del componente.
+- **Naming:** cada ícono es un componente único (ej. `Eye`, `Letter`, `Calendar`, `Global`, `AltArrowDown`, `ClockCircle`) — el weight es una prop, no un sufijo en el nombre (a diferencia de otras librerías de íconos). Verificar nombres reales en `node_modules/@solar-icons/react/dist/types/ssr/**` o vía MCP antes de usar uno nuevo — no inventar nombres.
+- **Nunca** copiar SVGs inline al proyecto — siempre importar desde el paquete.
+---
 ## Proyectos con overrides
 ### Breap
 Decisiones pendientes:
@@ -160,3 +172,4 @@ Herramientas del MCP: `list_components`, `get_component_docs`, `get_component_so
 | Fecha | Cambio |
 |-------|--------|
 | 2026-07 | Setup inicial HeroUI v3 template con theme oficial (hue 253.83, Inter) |
+| 2026-07-10 | Solar Icons (`@solar-icons/react`, variante `/ssr`, weight `Linear` por defecto) como librería oficial de íconos. Reemplazados SVGs inline en stories de InputGroup, DateField y TimeField |

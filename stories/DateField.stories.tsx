@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { DateField, Description, FieldError, Label } from '@heroui/react'
 import { getLocalTimeZone, today } from '@internationalized/date'
+import { AltArrowDown, Calendar } from '@solar-icons/react/ssr'
 
 const meta = {
   title: 'HeroUI/Formularios/DateField',
@@ -82,10 +83,7 @@ export const AllVariants: Story = {
             <Label>Date (prefix)</Label>
             <DateField.Group>
               <DateField.Prefix>
-                <svg className="size-4 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <rect height="18" rx="2" width="18" x="3" y="4" />
-                  <path d="M16 2v4M8 2v4M3 10h18" />
-                </svg>
+                <Calendar className="text-muted" color="currentColor" size={16} weight="Linear" />
               </DateField.Prefix>
               <DateField.Input>{(segment) => <DateField.Segment segment={segment} />}</DateField.Input>
             </DateField.Group>
@@ -95,9 +93,7 @@ export const AllVariants: Story = {
             <DateField.Group>
               <DateField.Input>{(segment) => <DateField.Segment segment={segment} />}</DateField.Input>
               <DateField.Suffix>
-                <svg className="size-4 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
+                <AltArrowDown className="text-muted" color="currentColor" size={16} weight="Linear" />
               </DateField.Suffix>
             </DateField.Group>
           </DateField>

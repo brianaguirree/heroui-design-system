@@ -1,32 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Description, FieldError, InputGroup, Label, Surface, TextField } from '@heroui/react'
-
-function EnvelopeIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-      <path d="M3 6.75A2.25 2.25 0 0 1 5.25 4.5h13.5A2.25 2.25 0 0 1 21 6.75v10.5A2.25 2.25 0 0 1 18.75 19.5H5.25A2.25 2.25 0 0 1 3 17.25V6.75Z" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="m3.75 6 8.25 6.75L20.25 6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
-}
-
-function EyeIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-      <path d="M2.25 12s3.75-7.5 9.75-7.5 9.75 7.5 9.75 7.5-3.75 7.5-9.75 7.5S2.25 12 2.25 12Z" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="12" cy="12" r="3" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
-}
-
-function GlobeIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="9" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M3 12h18M12 3c2.5 2.5 3.75 5.75 3.75 9S14.5 18.5 12 21c-2.5-2.5-3.75-5.75-3.75-9S9.5 5.5 12 3Z" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
-}
+import { Eye, Global, Letter } from '@solar-icons/react/ssr'
 
 const meta = {
   title: 'HeroUI/Formularios/InputGroup',
@@ -56,7 +30,7 @@ export const Playground: Story = {
       <Label>Email address</Label>
       <InputGroup {...args}>
         <InputGroup.Prefix>
-          <EnvelopeIcon className="size-4 text-muted" />
+          <Letter className="text-muted" color="currentColor" size={16} weight="Linear" />
         </InputGroup.Prefix>
         <InputGroup.Input className="w-full max-w-[280px]" placeholder="name@email.com" />
       </InputGroup>
@@ -74,7 +48,7 @@ export const AllVariants: Story = {
           <Label>Email address</Label>
           <InputGroup>
             <InputGroup.Prefix>
-              <EnvelopeIcon className="size-4 text-muted" />
+              <Letter className="text-muted" color="currentColor" size={16} weight="Linear" />
             </InputGroup.Prefix>
             <InputGroup.Input className="w-full max-w-[280px]" placeholder="name@email.com" />
           </InputGroup>
@@ -88,7 +62,7 @@ export const AllVariants: Story = {
           <InputGroup>
             <InputGroup.Input className="w-full max-w-[280px]" placeholder="name@email.com" />
             <InputGroup.Suffix>
-              <EnvelopeIcon className="size-4 text-muted" />
+              <Letter className="text-muted" color="currentColor" size={16} weight="Linear" />
             </InputGroup.Suffix>
           </InputGroup>
         </TextField>
@@ -113,7 +87,7 @@ export const AllVariants: Story = {
           <Label>Website</Label>
           <InputGroup>
             <InputGroup.Prefix>
-              <GlobeIcon className="size-4 text-muted" />
+              <Global className="text-muted" color="currentColor" size={16} weight="Linear" />
             </InputGroup.Prefix>
             <InputGroup.Input className="w-full max-w-[280px]" />
             <InputGroup.Suffix>.com</InputGroup.Suffix>
@@ -128,7 +102,7 @@ export const AllVariants: Story = {
             <Label>Primary variant</Label>
             <InputGroup variant="primary">
               <InputGroup.Prefix>
-                <EnvelopeIcon className="size-4 text-muted" />
+                <Letter className="text-muted" color="currentColor" size={16} weight="Linear" />
               </InputGroup.Prefix>
               <InputGroup.Input placeholder="name@email.com" />
             </InputGroup>
@@ -137,7 +111,7 @@ export const AllVariants: Story = {
             <Label>Secondary variant</Label>
             <InputGroup variant="secondary">
               <InputGroup.Prefix>
-                <EnvelopeIcon className="size-4 text-muted" />
+                <Letter className="text-muted" color="currentColor" size={16} weight="Linear" />
               </InputGroup.Prefix>
               <InputGroup.Input placeholder="name@email.com" />
             </InputGroup>
@@ -151,7 +125,7 @@ export const AllVariants: Story = {
           <Label>Your feedback</Label>
           <InputGroup>
             <InputGroup.Prefix>
-              <EnvelopeIcon className="size-4 text-muted" />
+              <Letter className="text-muted" color="currentColor" size={16} weight="Linear" />
             </InputGroup.Prefix>
             <InputGroup.TextArea
               className="resize-none"
@@ -169,7 +143,7 @@ export const AllVariants: Story = {
             <Label>Email address</Label>
             <InputGroup fullWidth>
               <InputGroup.Prefix>
-                <EnvelopeIcon className="size-4 text-muted" />
+                <Letter className="text-muted" color="currentColor" size={16} weight="Linear" />
               </InputGroup.Prefix>
               <InputGroup.Input placeholder="name@email.com" />
             </InputGroup>
@@ -179,7 +153,7 @@ export const AllVariants: Story = {
             <InputGroup fullWidth>
               <InputGroup.Input placeholder="Enter password" type="password" />
               <InputGroup.Suffix>
-                <EyeIcon className="size-4 text-muted" />
+                <Eye className="text-muted" color="currentColor" size={16} weight="Linear" />
               </InputGroup.Suffix>
             </InputGroup>
           </TextField>
@@ -193,7 +167,7 @@ export const AllVariants: Story = {
             <Label>Email address</Label>
             <InputGroup variant="secondary">
               <InputGroup.Prefix>
-                <EnvelopeIcon className="size-4 text-muted" />
+                <Letter className="text-muted" color="currentColor" size={16} weight="Linear" />
               </InputGroup.Prefix>
               <InputGroup.Input className="w-full max-w-[280px]" placeholder="name@email.com" />
             </InputGroup>
@@ -213,7 +187,7 @@ export const States: Story = {
           <Label>Email address</Label>
           <InputGroup>
             <InputGroup.Prefix>
-              <EnvelopeIcon className="size-4 text-muted" />
+              <Letter className="text-muted" color="currentColor" size={16} weight="Linear" />
             </InputGroup.Prefix>
             <InputGroup.Input className="w-full max-w-[280px]" placeholder="name@email.com" />
           </InputGroup>
@@ -226,7 +200,7 @@ export const States: Story = {
           <Label>Email address</Label>
           <InputGroup>
             <InputGroup.Prefix>
-              <EnvelopeIcon className="size-4 text-muted" />
+              <Letter className="text-muted" color="currentColor" size={16} weight="Linear" />
             </InputGroup.Prefix>
             <InputGroup.Input className="w-full max-w-[280px]" placeholder="name@email.com" />
           </InputGroup>
@@ -245,7 +219,7 @@ export const States: Story = {
           <Label>Email address</Label>
           <InputGroup>
             <InputGroup.Prefix>
-              <EnvelopeIcon className="size-4 text-muted" />
+              <Letter className="text-muted" color="currentColor" size={16} weight="Linear" />
             </InputGroup.Prefix>
             <InputGroup.Input className="w-full max-w-[280px]" />
           </InputGroup>
