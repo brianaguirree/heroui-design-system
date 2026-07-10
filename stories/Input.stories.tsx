@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Input, Label, Surface } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/Input',
+  title: 'HeroUI/Input',
   component: Input,
   parameters: {
     layout: 'centered',

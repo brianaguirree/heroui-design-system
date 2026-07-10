@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Description, FieldError, Label, Radio, RadioGroup } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/RadioGroup',
+  title: 'HeroUI/RadioGroup',
   component: RadioGroup,
   parameters: {
     layout: 'centered',

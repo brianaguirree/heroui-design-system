@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Checkbox, CheckboxGroup, Description, FieldError, Label } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/CheckboxGroup',
+  title: 'HeroUI/CheckboxGroup',
   component: CheckboxGroup,
   parameters: {
     layout: 'centered',

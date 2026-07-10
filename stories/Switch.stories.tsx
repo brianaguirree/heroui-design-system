@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Description, FieldError, Switch, SwitchGroup } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/Switch',
+  title: 'HeroUI/Switch',
   component: Switch,
   parameters: {
     layout: 'centered',

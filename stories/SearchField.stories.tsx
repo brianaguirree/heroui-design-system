@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Description, FieldError, Label, SearchField } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/SearchField',
+  title: 'HeroUI/SearchField',
   component: SearchField,
   parameters: {
     layout: 'centered',

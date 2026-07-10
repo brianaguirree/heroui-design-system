@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Label, Slider } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/Slider',
+  title: 'HeroUI/Slider',
   component: Slider,
   parameters: {
     layout: 'centered',

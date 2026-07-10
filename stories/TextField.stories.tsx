@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Description, FieldError, Input, Label, Surface, TextArea, TextField } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/TextField',
+  title: 'HeroUI/TextField',
   component: TextField,
   parameters: {
     layout: 'centered',

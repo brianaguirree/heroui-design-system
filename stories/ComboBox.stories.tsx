@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { ComboBox, Description, FieldError, Header, Input, Label, ListBox, Separator } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/ComboBox',
+  title: 'HeroUI/ComboBox',
   component: ComboBox,
   parameters: {
     layout: 'centered',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Description, ErrorMessage, Label, Tag, TagGroup } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/TagGroup',
+  title: 'HeroUI/TagGroup',
   component: TagGroup,
   parameters: {
     layout: 'centered',

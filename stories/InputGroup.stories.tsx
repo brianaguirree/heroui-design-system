@@ -3,7 +3,7 @@ import { Description, FieldError, InputGroup, Label, Surface, TextField } from '
 import { Eye, Global, Letter } from '@solar-icons/react/ssr'
 
 const meta = {
-  title: 'HeroUI/Formularios/InputGroup',
+  title: 'HeroUI/InputGroup',
   component: InputGroup,
   parameters: {
     layout: 'centered',

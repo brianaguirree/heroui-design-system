@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { FieldError, Header, Label, ListBox, Select, Separator } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/Select',
+  title: 'HeroUI/Select',
   component: Select,
   parameters: {
     layout: 'centered',

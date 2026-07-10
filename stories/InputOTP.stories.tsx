@@ -9,7 +9,7 @@ import {
 } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/InputOTP',
+  title: 'HeroUI/InputOTP',
   component: InputOTP,
   parameters: {
     layout: 'centered',

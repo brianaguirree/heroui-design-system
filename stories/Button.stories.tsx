@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Button, Spinner } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/Button',
+  title: 'HeroUI/Button',
   component: Button,
   parameters: {
     layout: 'centered',
@@ -71,6 +71,20 @@ export const AllVariants: Story = {
           <Button fullWidth variant="secondary">
             Secondary button
           </Button>
+        </div>
+      </div>
+
+      <div>
+        <p className="mb-3 text-sm font-medium text-muted">
+          Primary + tertiary pairing (Cancel/Confirm, Save/Cancel)
+        </p>
+        <p className="mb-3 text-xs text-muted">
+          `secondary` is a tint of the accent color, so it competes with `primary` for attention.
+          When a primary action needs a lower-emphasis companion, pair it with `tertiary` instead.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <Button variant="tertiary">Cancel</Button>
+          <Button>Confirm</Button>
         </div>
       </div>
     </div>

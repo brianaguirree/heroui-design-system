@@ -96,15 +96,15 @@ No mezclar sombras manuales con las superficies — dejar que el sistema de surf
 ---
 ## Variantes de componentes HeroUI establecidas
 ### Button
-Variants nativos: `solid`, `bordered`, `ghost`, `flat`, `faded`, `shadow`
+Variants: `primary`, `secondary`, `tertiary`, `outline`, `ghost`, `danger`
 Sizes: `sm`, `md`, `lg`
-Colors: `default`, `primary`, `secondary`, `success`, `warning`, `danger`
-Uso preferido:
+**`secondary` = tinte del accent, no gris neutro.** Fondo `--accent-soft` (`color-mix` de `--accent` al 15%/20% en hover), texto `--accent-soft-foreground` (= `--accent`). Override en `globals.css` → `@layer components { .button--secondary {} }` (token base viene de `@heroui/styles`, que usa `--default` gris).
+**Pairing:** cuando un `primary` va acompañado de una acción de menor énfasis, usar **`tertiary`** (gris neutro, `--default`), no `secondary`. `secondary` ahora comparte tinte de color con `primary`, así que combinarlos compite por atención en vez de jerarquizarla. Ejemplo (Cancel/Confirm en modals, forms, fieldsets):
 ```tsx
-<Button variant="solid" color="primary">Acción principal</Button>
-<Button variant="ghost" color="default">Secundario</Button>
-<Button variant="flat" color="danger">Destructivo</Button>
+<Button variant="tertiary">Cancel</Button>
+<Button>Confirm</Button>
 ```
+`secondary` queda para casos donde el botón necesita señalar "relacionado con la acción principal" sin ser la acción misma (ej. un solo botón standalone, no en par con `primary`).
 ### Card
 Usa el patrón compound con `.Root`. Fondo `--surface`. Para anidar cards, subir al `surface-secondary`.
 ### Input / Form controls
@@ -173,3 +173,4 @@ Herramientas del MCP: `list_components`, `get_component_docs`, `get_component_so
 |-------|--------|
 | 2026-07 | Setup inicial HeroUI v3 template con theme oficial (hue 253.83, Inter) |
 | 2026-07-10 | Solar Icons (`@solar-icons/react`, variante `/ssr`, weight `Linear` por defecto) como librería oficial de íconos. Reemplazados SVGs inline en stories de InputGroup, DateField y TimeField |
+| 2026-07-10 | Button `secondary` ahora usa `--accent-soft` (tinte del accent) en vez de `--default` gris. Pairing primary+secondary reemplazado por primary+`tertiary` en Modal, Form y Fieldset actions |

@@ -4,7 +4,7 @@ import { Time, getLocalTimeZone, now } from '@internationalized/date'
 import { AltArrowDown, ClockCircle } from '@solar-icons/react/ssr'
 
 const meta = {
-  title: 'HeroUI/Formularios/TimeField',
+  title: 'HeroUI/TimeField',
   component: TimeField,
   parameters: {
     layout: 'centered',

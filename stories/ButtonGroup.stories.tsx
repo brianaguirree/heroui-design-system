@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Button, ButtonGroup } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/ButtonGroup',
+  title: 'HeroUI/ButtonGroup',
   component: ButtonGroup,
   parameters: {
     layout: 'centered',

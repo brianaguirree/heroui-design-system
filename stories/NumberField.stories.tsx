@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Description, FieldError, Label, NumberField } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/NumberField',
+  title: 'HeroUI/NumberField',
   component: NumberField,
   parameters: {
     layout: 'centered',

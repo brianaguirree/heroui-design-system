@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 import { Button, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/Form',
+  title: 'HeroUI/Form',
   component: Form,
   parameters: {
     layout: 'centered',
@@ -54,7 +54,7 @@ export const Playground: Story = {
       </TextField>
       <div className="flex gap-2">
         <Button type="submit">Submit</Button>
-        <Button type="reset" variant="secondary">
+        <Button type="reset" variant="tertiary">
           Reset
         </Button>
       </div>

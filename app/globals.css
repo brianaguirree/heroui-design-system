@@ -98,4 +98,28 @@
 }
 
 @layer components {
+  /*
+   * Secondary button: use a tinted opacity of the primary accent color
+   * instead of the neutral gray --default token, so it reads as a
+   * lower-emphasis variant of the primary action rather than an unrelated
+   * gray button. Pairs with .button--tertiary (neutral gray) when a
+   * primary button needs a lower-emphasis companion.
+   */
+  .button--secondary {
+    --button-bg: var(--accent-soft);
+    --button-bg-hover: var(--accent-soft-hover);
+    --button-bg-pressed: var(--accent-soft-hover);
+  }
+
+  /*
+   * Mitigates a Chromium text-rendering artifact: .button has a permanent
+   * transform-gpu/will-change-transform (for the press scale). When it sits
+   * inside an ancestor entrance animation (e.g. AlertDialog's zoom-in), the
+   * GPU layer can settle with grayscale instead of subpixel antialiasing
+   * until the next repaint (e.g. hover), making text look momentarily
+   * heavier. Most visible on low-contrast variants like tertiary.
+   */
+  .button {
+    backface-visibility: hidden;
+  }
 }

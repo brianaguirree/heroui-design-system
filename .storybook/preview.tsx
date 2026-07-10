@@ -24,6 +24,21 @@ const preview: Preview = {
         dark: { name: 'dark', value: 'oklch(12.00% 0.0015 253.83)' },
       },
     },
+
+    options: {
+      storySort: (a, b) => {
+        const componentOrder = a.title.localeCompare(b.title, undefined, { numeric: true })
+        if (componentOrder !== 0) return componentOrder
+
+        const storyRank = (name) => {
+          if (name === 'Playground') return 0
+          if (name === 'AllVariants') return 1
+          if (name === 'States') return 2
+          return 3
+        }
+        return storyRank(a.name) - storyRank(b.name)
+      },
+    },
   },
 
   globalTypes: {

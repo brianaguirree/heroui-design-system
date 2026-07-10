@@ -12,7 +12,7 @@ import {
 } from '@heroui/react'
 
 const meta = {
-  title: 'HeroUI/Formularios/Fieldset',
+  title: 'HeroUI/Fieldset',
   component: Fieldset,
   parameters: {
     layout: 'centered',
@@ -48,7 +48,7 @@ export const Playground: Story = {
         </Fieldset.Group>
         <Fieldset.Actions>
           <Button type="submit">Save changes</Button>
-          <Button type="reset" variant="secondary">
+          <Button type="reset" variant="tertiary">
             Cancel
           </Button>
         </Fieldset.Actions>
@@ -81,7 +81,7 @@ export const AllVariants: Story = {
             </Fieldset.Group>
             <Fieldset.Actions>
               <Button type="submit">Save changes</Button>
-              <Button type="reset" variant="secondary">
+              <Button type="reset" variant="tertiary">
                 Cancel
               </Button>
             </Fieldset.Actions>
