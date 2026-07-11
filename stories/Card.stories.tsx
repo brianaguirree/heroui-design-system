@@ -131,6 +131,8 @@ export const States: Story = {
         <p className="mb-3 text-sm font-medium text-muted">Card horizontal con acción</p>
         <Card className="w-[420px] items-stretch md:flex-row">
           <div className="relative h-[120px] w-[120px] shrink-0 overflow-hidden rounded-2xl">
+            {/* Story de Storybook, no página de Next — next/image no aplica aquí. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               alt="Cerezas"
               className="pointer-events-none absolute inset-0 h-full w-full scale-125 object-cover select-none"
