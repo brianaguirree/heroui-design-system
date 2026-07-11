@@ -15,6 +15,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Documentación vendored de HeroUI (gitignored) — no es código del proyecto.
+    ".heroui-docs/**",
   ]),
   ...storybook.configs["flat/recommended"]
 ]);
