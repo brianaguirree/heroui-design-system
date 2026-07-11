@@ -45,7 +45,7 @@ HeroUI es una **living library** — no copies código de componentes, impórtal
 import { Button, Card, Input } from '@heroui/react'
 ```
 
-**Patrón compound con `.Root`:** los componentes compuestos usan sufijo `.Root` para el elemento principal (ej. `Card.Root`, `Switch.Root`, `Tabs.Root`, `Popover.Root`). Consulta el MCP para el patrón exacto de cada uno.
+**Patrón compound con dot notation:** los componentes compuestos se usan directamente como raíz (`<Card>`, `<Tabs>`, `<Switch>`) y sus partes internas se acceden con dot notation: `Card.Header`, `Card.Title`, `Card.Description`, `Card.Content`, `Card.Footer`, etc. **En HeroUI v3 NO existe el sufijo `.Root`** — no "corrijas" código existente hacia `Card.Root`/`Tabs.Root`; ese patrón no existe en esta librería. Consulta el MCP para la anatomía exacta de cada componente.
 La customización ocurre en cuatro niveles, en orden de preferencia:
 ### 1. Tokens globales (`:root` / `.dark` en globals.css)
 Para cambios de brand, colores, radio — afecta todo el sistema. Ver lista de tokens abajo.

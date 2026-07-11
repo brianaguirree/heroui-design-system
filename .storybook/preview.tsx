@@ -18,13 +18,6 @@ const preview: Preview = {
       test: 'todo'
     },
 
-    backgrounds: {
-      options: {
-        light: { name: 'light', value: 'oklch(97.02% 0.0015 253.83)' },
-        dark: { name: 'dark', value: 'oklch(12.00% 0.0015 253.83)' },
-      },
-    },
-
     options: {
       storySort: (a, b) => {
         const componentOrder = a.title.localeCompare(b.title, undefined, { numeric: true })
@@ -67,6 +60,9 @@ const preview: Preview = {
         } else {
           document.documentElement.classList.remove('dark')
         }
+        // El canvas toma el fondo del token --background (via utilidades del
+        // theme), así light/dark siempre reflejan los valores reales del sistema.
+        document.body.classList.add('bg-background', 'text-foreground')
       }, [theme])
 
       return <Story />
